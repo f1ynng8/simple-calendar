@@ -11,7 +11,7 @@
   2. 将本工程的bin目录放到RaspberryPi_JetsonNano/python/下面
   3. sudo python3 daemon.py查看运行效果
   4. 使用cron设置成每天凌晨运行一次bin/daemon.py
-  5. 每年国务院发布节假日放假安排后更新bin/holiday下对应年份的.ini文件
+  5. 每年国务院发布节假日放假安排后更新bin/days下对应年份的.ini文件
  
 ![效果图](/img/sample.png)
 (图片需fq)
