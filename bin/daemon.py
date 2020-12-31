@@ -92,7 +92,6 @@ def DrawDate(dateMatrix, row, col,original_x,original_y,year,month):
     font9 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 10)
     today = datetime.date.today()
     currentDay = 0
-    currentValue = str(year) + str(month) + str(dateMatrix[row][col])
     monthValue = str(month)
     dayValue = str(dateMatrix[row][col])
     if month < 10:
@@ -100,8 +99,10 @@ def DrawDate(dateMatrix, row, col,original_x,original_y,year,month):
     if dateMatrix[row][col] < 10:
         dayValue = '0' + str(dateMatrix[row][col])
     keyValue = str(year) + monthValue + dayValue
-
-    if today.strftime('%Y%m%d') == currentValue :
+    print(today.strftime('%Y%m%d'))
+    print(keyValue)
+    print("------------")
+    if today.strftime('%Y%m%d') == keyValue :
         currentDay = 1
         draw.rectangle((original_x + 2 + col*28, original_y + 42 + row*18, original_x  + col*28 + 15, original_y + 54 + row*18), fill = 0)
     else:
