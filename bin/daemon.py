@@ -124,7 +124,8 @@ def DrawDate(dateMatrix, row, col,original_x,original_y,year,month):
 
 def SetDayStatus(festivalsDays,holidays, workDays, year):
     cfg = ConfigParser()
-    cfg.read('./days/'+year+'.ini')
+    runningDir = os.path.dirname(os.path.realpath(__file__))
+    cfg.read(runningDir + '/days/'+year+'.ini')
     for f in cfg['节日日期']:
         dates = cfg.get(u'节日日期',f)
         festivalsDays[year+cfg.get(u'节日日期',f)] = f
